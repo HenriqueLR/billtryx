@@ -1,7 +1,13 @@
+#encoding: utf-8
+
+'''
+More informations you can see documentation 
+of the project https://github.com/HenriqueLR/billtryx
+'''
+
 import time, urllib, urllib2
 from pagination import Pagination
-try: import simplejson as json
-except ImportError: import json
+import json
 
 
 

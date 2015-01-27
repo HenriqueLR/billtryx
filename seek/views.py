@@ -29,7 +29,7 @@ def view_detail_shots(request, *args, **kwargs):
 	try: 
 		id_shots = int(kwargs.get('pk'))
 	except ValueError: 
-		id_shots = 1	
+		return HttpResponseNotFound('<h1>Page not found</h1>')
 
 	try:
 		shots = Dribbble()

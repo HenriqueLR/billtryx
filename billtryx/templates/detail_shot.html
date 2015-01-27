@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+  {% include 'filters/header.html' with form=form %}
+
+{% endblock %}
+
+
+{% block container %}
+    
+<div class='row'>
+  <div class="col-md-2 col-md-offset-5">
+    <div class="center-block">
+      <h3>{{ list_shots.player.name }}</h3>
+        <img heigth='{{list_shots.height}}' alt='{{ list_shots.width }}' class='img-thumbnail' src='{{ list_shots.player.avatar_url }}' />
+        <nav>
+        <ul class="pager">
+          <li><a href= "/" style='background-color:#6C5195;color:white;'>&lt;&lt; </a></li>
+      </nav>
+    </div>
+  </div>
+</div>
+{% endblock %}

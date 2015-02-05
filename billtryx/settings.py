@@ -1,3 +1,10 @@
+#encoding: utf-8
+
+'''
+More informations you can see documentation 
+of the project https://github.com/HenriqueLR/billtryx
+'''
+
 import os.path
 VAR_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -60,7 +67,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',
     'seek',
 )
 
@@ -122,9 +128,3 @@ LOGGING = {
         },
     }
 }
-
-
-
-
-
-

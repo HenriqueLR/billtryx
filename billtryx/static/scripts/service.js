@@ -1,7 +1,6 @@
 (function (angular) {
     'use strict';
 
-
     var app = angular.module('Service', [], function ($httpProvider) {
         $httpProvider.interceptors.push('Auth');
     });
@@ -28,6 +27,5 @@
             }
         }
     });
-
 
 })(angular);

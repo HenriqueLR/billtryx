@@ -1,6 +1,6 @@
 {% load static from staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="billtryx">
 	<head>
     	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +9,6 @@
 
     	<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
     	<link href="{{ STATIC_URL }}css/jumbotron.css" rel="stylesheet">
-    	<script src="{{ STATIC_URL }}js/ie-emulation-modes-warning.js"></script>
-
 
     	{% block extrahead %}{% endblock %}
   	</head>
@@ -39,10 +37,11 @@
     	</center>
 
     	{% block extras %}
-		<script src="{{ STATIC_URL }}scripts/angular.js"></script>
-    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    		<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
-    		<script src="{{ STATIC_URL }}js/ie10-viewport-bug-workaround.js"></script>
+            <script src="{{ STATIC_URL }}scripts/angular.js"></script>
+            <script src="{{ STATIC_URL }}scripts/app.js"></script>
+            <script src="{{ STATIC_URL }}scripts/controller.js"></script>
+            <script src="{{ STATIC_URL }}scripts/service.js"></script>
+            <script src="{{ STATIC_URL }}scripts/directives.js"></script>
     	{% endblock %}
 	</body>
 </html>

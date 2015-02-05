@@ -8,44 +8,19 @@
 
 
 {% block container %}
-  <div class="row">
-    {% for x in list_shots %}
-      {% if x.image_url %}
-      <div class="col-md-4">
-
-        <h4>{{ x.title }}</h4>
-        <a href='detail_shots/{{ x.id }}'>
-          <p><img alt='{{ x.width }}' class='img-thumbnail' src='{{ x.image_url }}'></img></p>
+  <div class="row" ng-controller="Ctrl">
+    {% verbatim %}
+      <div class="right menu nav-pagination" pagination></div>
+      <div class="col-md-4" ng-repeat="item in shots track by $index">
+        <h4>{{ item.title }}</h4>
+        <a class="image" ng-click="showDetail(item)">
+          <img alt='{{ item.width }}' class='img-thumbnail' ng-attr-src="{{ item.images.normal }}">
         </a>
-        <a href='detail_shots/{{ x.id }}'><span class="badge badge-inverse">{{ x.views_count }}</span></a>
-        <a href='detail_shots/{{ x.id }}'><span class="badge badge-inverse">{{ x.likes_count }}</span></a>
-        <a href='detail_shots/{{ x.id }}'><span class="badge badge-inverse">{{ x.comments_count }}</span></a>
-        <a href='detail_shots/{{ x.id }}'><span class="badge badge-inverse">{{ x.player.name }}</span></a>
+        <a href='#'><span class="badge badge-inverse">{{ item.views_count }}</span></a>
+        <a href='#'><span class="badge badge-inverse">{{ item.likes_count }}</span></a>
+        <a href='#'><span class="badge badge-inverse">{{ item.comments_count }}</span></a>
+        <a href='#'><span class="badge badge-inverse">{{ item.player.name }}</span></a>
       </div>
-      {% endif %}
-    {% empty %}
-      <h1>Não há shots disponíveis no momento.</h1>
-    {% endfor %} 
-  </div>      
-
-  <div class='row'>
-    <div class="col-md-4 col-md-offset-4">
-      <nav>
-        <ul class="pager">
-          {% if pagination.page == 1 %}
-            {% if pagination.has_next %}
-              <li><a href="?page={{ pagination.has_next_next }}" style='background-color:#6C5195;color:white;'> &gt;&gt;</a></li>  
-            {% endif %} 
-          {% elif pagination.page > 1 %}
-            {% if pagination.has_prev %}
-              <li><a href= "?page={{ pagination.has_prev_next }}" style='background-color:#6C5195;color:white;'>&lt;&lt; </a></li>
-            {% endif %}
-            {% if pagination.has_next %}
-              <li><a href="?page={{ pagination.has_next_next }}" style='background-color:#6C5195;color:white;'> &gt;&gt;</a></li>
-            {% endif %}
-          {% endif %}
-        </ul>
-      </nav>
-    </div>
+    {% endverbatim %}
   </div>
 {% endblock %}

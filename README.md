@@ -1,2 +1,2 @@
 # billtryx
-Simple application for api.
+Simple application for api using angular.

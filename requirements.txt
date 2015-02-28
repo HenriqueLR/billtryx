@@ -1,6 +1,5 @@
 Django==1.7.3
 argparse==1.2.1
-gunicorn==19.1.1
 meld3==1.0.0
 psycopg2==2.4.5
 pysqlite==2.6.3

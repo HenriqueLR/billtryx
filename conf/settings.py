@@ -89,9 +89,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 'django.core.context_processors.request',
 )
 
-ROOT_URLCONF = 'billtryx.urls'
+ROOT_URLCONF = 'conf.urls'
 
-WSGI_APPLICATION = 'billtryx.wsgi.application'
+WSGI_APPLICATION = 'conf.wsgi.application'
 
 LANGUAGE_CODE = 'pt-br'
 

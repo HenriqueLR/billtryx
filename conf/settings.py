@@ -22,8 +22,6 @@ TEMPLATE_DEBUG = DEBUG
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
